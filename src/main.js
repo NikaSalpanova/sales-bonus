@@ -126,7 +126,7 @@ function analyzeSalesData(data, options) {
     seller.bonus = calculateBonusByProfit(index, array.length, seller); // Считаем бонус
     seller.top_products = Object.entries(seller.products_sold)
       .map(([key, value]) => ({ sku: key, quantity: value }))
-      .toSorted((a, b) => b.quantity - a.quantity)
+      .sort((a, b) => b.quantity - a.quantity)
       .slice(0, 10); // Формируем топ-10 товаров
   });
 
