@@ -9,7 +9,7 @@ function calculateSimpleRevenue(purchase, _product) {
   // @TODO: Расчет выручки от операции
   const { discount, sale_price, quantity } = purchase;
 
-  if (!purchase || !Array.isArray(purchase) || !purchase.length === 0) {
+  if (!purchase || !purchase.length === 0) {
     throw new Error("Некорректные входные данные");
   }
   //   Перевести скидку из процентов в десятичное число: скидка / 100.
@@ -31,7 +31,7 @@ function calculateBonusByProfit(index, total, seller) {
   // @TODO: Расчет бонуса от позиции в рейтинге
   const { profit } = seller;
 
-  if (!seller || !Array.isArray(seller) || !seller.length === 0) {
+  if (!seller || !seller.length === 0) {
     throw new Error("Некорректные входные данные");
   }
 
