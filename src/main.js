@@ -67,10 +67,10 @@ function analyzeSalesData(data, options) {
     !Array.isArray(data.customers) ||
     !Array.isArray(data.products) ||
     !Array.isArray(data.purchase_records) ||
-    !data.sellers.length === 0 ||
-    !data.customers.length === 0 ||
-    !data.products.length === 0 ||
-    !data.purchase_records.length === 0
+    data.sellers.length === 0 ||
+    data.customers.length === 0 ||
+    data.products.length === 0 ||
+    data.purchase_records.length === 0
   ) {
     throw new Error("Некорректные входные данные");
   }
